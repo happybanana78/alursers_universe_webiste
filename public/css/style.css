@@ -1,0 +1,74 @@
+body {
+    background-image: url("/images/background.jpg") !important;
+    background-size: cover !important;
+    background-attachment: fixed;
+    height: 100vh !important;
+    overflow-x: hidden;
+}
+
+.nav-link {
+    color: white !important;
+    text-shadow: 5px 0 0 black;
+}
+
+.navbar {
+    z-index: 1;
+}
+
+.nav-link:hover {
+    color: goldenrod !important;
+}
+
+.join-btn {
+    color: black !important;
+    background-color: ghostwhite !important;
+    text-shadow: none !important;
+    border: 3px solid black !important;
+}
+
+.join-btn:hover {
+    color: black !important;
+    border: 3px solid goldenrod !important;
+}
+
+.social:hover {
+    color: goldenrod !important;
+}
+
+.welcome-text {
+    text-shadow: 5px 0 0 black;
+}
+
+.bg-bloob img {
+    width: 80%;
+    height: 200%;
+    margin-top: -5%;
+    margin-right: -22%;
+    z-index: 0;
+}
+
+.bloobs {
+    width: 70%;
+    margin-left:16%;
+}
+
+.modal-content {
+    background-color: rgba(0, 43, 60, 1) !important;
+    color: whitesmoke !important;
+}
+
+.modal-dialog {
+    border: 2px solid white !important;
+}
+
+.login-extra {
+    color: lightgrey !important;
+}
+
+.login-extra p {
+    cursor: pointer;
+}
+
+footer {
+    z-index: 2;
+}
