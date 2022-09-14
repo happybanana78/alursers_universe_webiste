@@ -2,7 +2,7 @@
 
 //use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Models\Listing;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,25 +15,10 @@ use App\Models\Listing;
 |
 */
 
+// Display Main Page
 Route::get('/', function () {
-    return view('main', [
-        "heading" => "Latest Listings",
-        "listings" => Listing::all()
-    ]);
+    return view('main');
 });
 
-//example routes
-/*
-Route::get("/hello", function() {
-    return "hello gigi";
-});
-
-Route::get("/posts/{id}", function ($id) {
-    dd($id); //helper method for debugging
-    return response("post " . $id);
-})->where("id", "[0-9]+"); //constrains for id type
-
-Route::get("/search", function (Request $request) {
-    return $request->name;
-});
-*/
+// Signup User
+Route::post("/register", [UserController::class, "signup"]);

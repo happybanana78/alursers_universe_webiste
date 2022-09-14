@@ -1,3 +1,4 @@
+/* generals */
 body {
     background-image: url("/images/background.jpg") !important;
     background-size: cover !important;
@@ -6,6 +7,7 @@ body {
     overflow-x: hidden;
 }
 
+/* navigation */
 .nav-link {
     color: white !important;
     text-shadow: 5px 0 0 black;
@@ -31,10 +33,16 @@ body {
     border: 3px solid goldenrod !important;
 }
 
+/* footer */
+footer {
+    z-index: 2;
+}
+
 .social:hover {
     color: goldenrod !important;
 }
 
+/* main page content */
 .welcome-text {
     text-shadow: 5px 0 0 black;
 }
@@ -52,6 +60,7 @@ body {
     margin-left:16%;
 }
 
+/* modals */
 .modal-content {
     background-color: rgba(0, 43, 60, 1) !important;
     color: whitesmoke !important;
@@ -61,6 +70,7 @@ body {
     border: 2px solid white !important;
 }
 
+/* login modal */
 .login-extra {
     color: lightgrey !important;
 }
@@ -69,6 +79,20 @@ body {
     cursor: pointer;
 }
 
-footer {
-    z-index: 2;
+/* sliders */
+.slide {
+    width: 60%;
+    height: 100%;
+    right: 0;
+    z-index: 5;
+}
+
+/* roadmap slide */
+.roadmap {
+    right: 0;
+}
+
+.roadmap-al {
+    width: 40%;
+    margin-top: 30%;
 }
