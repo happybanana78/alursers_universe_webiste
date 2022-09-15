@@ -1,6 +1,8 @@
 <?php
 
 //use Illuminate\Http\Request;
+
+use App\Http\Controllers\SlideController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
@@ -16,9 +18,7 @@ use App\Http\Controllers\UserController;
 */
 
 // Display Main Page
-Route::get('/', function () {
-    return view('main');
-});
+Route::get("/", [SlideController::class, "index"]);
 
 // Signup User
 Route::post("/register", [UserController::class, "signup"]);
