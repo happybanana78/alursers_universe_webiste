@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="{{asset("favicon.png")}}" type="image/x-icon">
     <link rel="stylesheet" href="{{asset("css/style.css")}}">
+    <link rel="stylesheet" href="{{asset("css/particles.css")}}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -15,7 +16,7 @@
 </head>
 <body class="overflow-hidden" x-data="{roadmap: false, collection: false, faq: false}">
   <nav class="relative container mx-auto bg-slate-900 
-  px-10 py-1 items-center md:flex justify-between">
+  px-10 py-1 items-center md:flex justify-between z-20">
     <div>
       <a href=""><img class="w-44" src="{{asset("images/logo.png")}}" alt=""></a>
     </div>
@@ -32,7 +33,23 @@
       hover:text-white hover:bg-neutral-500 text-2xl hidden md:block" href="">Join Now!</a>
     </div>
   </nav>
+  <div class="h-screen z-10 absolute top-0 w-full" 
+  x-on:click="roadmap = false, collection = false, faq = false"></div>
   @yield('content')
+  <footer>
+    <section id="footer">
+      <div class="absolute container left-1/2 text-center space-x-5 p-5 bottom-0
+      -translate-x-1/2 text-3xl text-white z-20">
+        <a class="hover:text-blue-900" href=""><i class="fa-brands fa-twitter"></i></a>
+        <a class="hover:text-blue-900" href=""><i class="fa-brands fa-telegram"></i></a>
+        <a class="hover:text-blue-900" href=""><i class="fa-brands fa-discord"></i></a>
+      </div>
+    </section>
+  </footer>
+  <div class="h-screen z-0 absolute top-0 w-full">
+    @include('partials._particles')
+  </div>
+  <script src="https://kit.fontawesome.com/dce035b76e.js" crossorigin="anonymous"></script>
   <script src="{{asset("js/bloobs_slider.js")}}"></script>
 </body>
 </html>

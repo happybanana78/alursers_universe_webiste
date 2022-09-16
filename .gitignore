@@ -17,3 +17,6 @@ yarn-error.log
 /.vscode
 /alursers_website-main
 composer.lock
+package-lock.json
+input.css
+postcss.config.js

@@ -7,7 +7,7 @@
 @include('partials._faq_slide')
 
 <section id="hero">
-    <div class="flex flex-col md:flex-row container mx-auto h-screen
+    <div class="flex flex-col md:flex-row container mx-auto h-screen md:-mt-20 md:space-x-6 z-20
     section-bg md:justify-between items-center px-20 border-x-2 border-slate-900 pt-20 md:pt-0">
         <div class="text-center">
             <h1 class="text-white text-5xl">Welcome To The Alursers Universe</h1>
