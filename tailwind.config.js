@@ -9,10 +9,11 @@ module.exports = {
       xl: "1440px"
     },
     extend: {
-      white: "white",
-      transitionProperty: {
-        'height': 'height'
-      }
+      colors: {
+        white: "white",
+        light: "#E2DFD2",
+        gold: "gold"
+      },
     },
   },
   plugins: [],

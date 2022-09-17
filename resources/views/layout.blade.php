@@ -18,7 +18,7 @@
   <nav class="relative container mx-auto bg-slate-900 
   px-10 py-1 items-center md:flex justify-between z-20">
     <div>
-      <a href=""><img class="w-44" src="{{asset("images/logo.png")}}" alt=""></a>
+      <a href="/"><img class="w-44" src="{{asset("images/logo.png")}}" alt=""></a>
     </div>
     <div class="text-white space-x-6 text-2xl hidden md:flex">
       <a x-on:click="roadmap = !roadmap, collection = false, faq = false" 
