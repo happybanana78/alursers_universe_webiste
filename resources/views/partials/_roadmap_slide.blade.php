@@ -11,7 +11,8 @@ class="container h-screen bg-emerald-900 absolute top-30 left-1/2 z-30
         <img class="max-w-full" src="{{asset("images/roadmap_al.png")}}" alt="">
     </div>
     <a href="{{"docs/LitePaper.pdf"}}" target="_blank" class="p-3 px-10 bg-white text-slate-900
-     rounded-full mb-20 text-xl mt-10 lg:mt-0 hover:bg-slate-900 hover:text-white">Read</a>
+     rounded-full mb-20 text-xl mt-10 lg:mt-0 hover:bg-slate-900 hover:text-white
+     hover:scale-125 ease-in duration-300">Read</a>
     <div class="w-3/4 lg:w-2/5 mb-20">
         <img class="max-w-full" src="{{asset("images/roadmap.png")}}" alt="">
     </div>

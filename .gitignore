@@ -20,3 +20,4 @@ composer.lock
 package-lock.json
 input.css
 postcss.config.js
+/public/images/Bloob_Assets
