@@ -16,6 +16,9 @@ class SearchController extends Controller
         $path = public_path() . "/metadata/*";
         // Get The Crude Number Of The NFT From Form Data
         $nftNumber = explode("#", $formData["nft_name"]);
+        if (count($nftNumber) <= 1) {
+            return redirect("/")->with("found", "NFT Not Found!");
+        }
         // Loop All The Files
         foreach(glob($path) as $file) {
             // Lower Files Number
@@ -45,6 +48,56 @@ class SearchController extends Controller
                                     // Compare If It Matches With Form Data Number
                                     if ($secondNumberIsolation[0] == $nftNumber[1]) {
                                         $result = "Rare Grade";
+                                        $found = true;
+                                        return view("main", [
+                                            "data" => $result
+                                        ]);
+                                    }
+                                }
+                                if (str_contains($string, "Common Grade")) {
+                                    // Compare If It Matches With Form Data Number
+                                    if ($secondNumberIsolation[0] == $nftNumber[1]) {
+                                        $result = "Common Grade";
+                                        $found = true;
+                                        return view("main", [
+                                            "data" => $result
+                                        ]);
+                                    }
+                                }
+                                if (str_contains($string, "Epic Grade")) {
+                                    // Compare If It Matches With Form Data Number
+                                    if ($secondNumberIsolation[0] == $nftNumber[1]) {
+                                        $result = "Epic Grade";
+                                        $found = true;
+                                        return view("main", [
+                                            "data" => $result
+                                        ]);
+                                    }
+                                }
+                                if (str_contains($string, "Legendary Grade")) {
+                                    // Compare If It Matches With Form Data Number
+                                    if ($secondNumberIsolation[0] == $nftNumber[1]) {
+                                        $result = "Legendary Grade";
+                                        $found = true;
+                                        return view("main", [
+                                            "data" => $result
+                                        ]);
+                                    }
+                                }
+                                if (str_contains($string, "Mythic Grade")) {
+                                    // Compare If It Matches With Form Data Number
+                                    if ($secondNumberIsolation[0] == $nftNumber[1]) {
+                                        $result = "Mythic Grade";
+                                        $found = true;
+                                        return view("main", [
+                                            "data" => $result
+                                        ]);
+                                    }
+                                }
+                                if (str_contains($string, "God Grade")) {
+                                    // Compare If It Matches With Form Data Number
+                                    if ($secondNumberIsolation[0] == $nftNumber[1]) {
+                                        $result = "God Grade";
                                         $found = true;
                                         return view("main", [
                                             "data" => $result
