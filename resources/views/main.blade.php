@@ -5,6 +5,14 @@
 @include('partials._roadmap_slide')
 @include('partials._collection_slide')
 @include('partials._faq_slide')
+@include('partials._search_slide')
+
+@php
+    use App\libraries\Slider;
+    $slider = new Slider();
+    $slider->setPath("images/bloobs/*");
+    $files = $slider->getFiles();
+@endphp
 
 <section id="hero">
     <div class="flex flex-col md:flex-row container mx-auto h-screen md:-mt-20 md:space-x-6 z-20

@@ -14,19 +14,21 @@
     <script src="//unpkg.com/alpinejs" defer></script>
     <title>Alursers Universe</title>
 </head>
-<body class="overflow-hidden" x-data="{roadmap: false, collection: false, faq: false}">
+<body class="overflow-hidden" x-data="{roadmap: false, collection: false, faq: false, search: false}">
   <nav class="relative container mx-auto bg-slate-900 
   px-10 py-1 items-center md:flex justify-between z-20">
     <div>
       <a href="/"><img class="w-44" src="{{asset("images/logo.png")}}" alt=""></a>
     </div>
     <div class="text-white space-x-6 text-2xl hidden md:flex">
-      <a x-on:click="roadmap = !roadmap, collection = false, faq = false" 
+      <a x-on:click="roadmap = !roadmap, collection = false, faq = false, search = false" 
       class="hover:text-neutral-500 cursor-pointer">Roadmap</a>
-      <a x-on:click="collection = !collection, roadmap = false, faq = false" 
+      <a x-on:click="collection = !collection, roadmap = false, faq = false, search = false" 
       class="hover:text-neutral-500 cursor-pointer">Collection</a>
-      <a x-on:click="faq = !faq, roadmap = false, collection = false" 
+      <a x-on:click="faq = !faq, roadmap = false, collection = false, search = false" 
       class="hover:text-neutral-500 cursor-pointer">FAQ</a>
+      <a x-on:click="search = !search, roadmap = false, collection = false, faq = false" 
+      class="hover:text-neutral-500 cursor-pointer"><i class="fa-solid fa-magnifying-glass"></i></a>
     </div>
     <div>
       <button class="p-3 px-5 bg-white text-slate-900 rounded-full hover:scale-125 ease-in duration-300
@@ -34,7 +36,8 @@
     </div>
   </nav>
   <div class="h-screen z-10 absolute top-0 w-full" 
-  x-on:click="roadmap = false, collection = false, faq = false"></div>
+  x-on:click="roadmap = false, collection = false, faq = false, search = false"></div>
+  <x-flash-found-message />
   @yield('content')
   <footer>
     <section id="footer">

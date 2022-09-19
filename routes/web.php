@@ -2,6 +2,7 @@
 
 //use Illuminate\Http\Request;
 
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\SlideController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -18,7 +19,12 @@ use App\Http\Controllers\UserController;
 */
 
 // Display Main Page
-Route::get("/", [SlideController::class, "index"]);
+Route::get("/", function() {
+    return view("main");
+});
+
+// Search for NFT Rarity
+Route::post("/search", [SearchController::class, "search"]);
 
 // Signup User
 Route::post("/register", [UserController::class, "signup"]);
