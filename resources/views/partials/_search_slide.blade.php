@@ -1,4 +1,4 @@
-<div x-show="search" x-cloak 
+<div x-show="" x-cloak 
 x-transition:enter="transition duration-1000"
 x-transition:enter-start="opacity-0 -translate-y-5"
 x-transition:enter-end="opacity-100 translate-y-0"
@@ -9,17 +9,21 @@ class="container h-screen bg-emerald-900 absolute top-30 left-1/2 z-30
 -translate-x-1/2 items-center px-6">
     <div class="p-6 container mx-auto text-center space-y-20 mb-20 mt-40">
         <b class="text-light text-4xl">Wanna Know How Rare You NFT Is?</b>
-        <form action="/search" method="POST" class="flex justify-center">
+        <form id="search_form" action="/search" method="POST" class="flex justify-center">
             @csrf
-            <input type="text" name="nft_name" class="w-1/2 p-2 text-2xl" placeholder="Bloob #N">
-            <button class="text-4xl ml-3 bg-slate-900 text-white px-6 p-2
+            <input id="nft_name" type="text" name="nft_name" placeholder="Bloob #N" 
+            class="w-1/2 p-2 text-2xl">
+            <button id="search_btn" class="text-4xl ml-3 bg-slate-900 text-white px-6 p-2
             hover:bg-slate-800" 
             type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
     </div>
     @if (isset($data))
         <div class="container text-center mx-auto p-6">
-            <b class="text-3xl text-white">{{$data}}</b>
+            <b id="rarity" class="text-3xl text-white">{{$data}}</b>
         </div>
     @endif
 </div>
+<script>
+
+</script>
