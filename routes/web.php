@@ -6,6 +6,8 @@ use App\Http\Controllers\SearchController;
 use App\Http\Controllers\SlideController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Livewire\HomePage;
+use App\Http\Livewire\SearchRarity;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,12 +21,7 @@ use App\Http\Controllers\UserController;
 */
 
 // Display Main Page
-Route::get("/", function() {
-    return view("main");
-});
-
-// Search for NFT Rarity
-Route::post("/search", [SearchController::class, "search"]);
+Route::get("/", HomePage::class);
 
 // Signup User
 Route::post("/register", [UserController::class, "signup"]);

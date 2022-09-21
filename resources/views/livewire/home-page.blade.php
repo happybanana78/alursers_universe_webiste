@@ -1,11 +1,7 @@
-@extends('layout')
-
-@section('content')
-
+@include('partials._search_slide')
 @include('partials._roadmap_slide')
 @include('partials._collection_slide')
 @include('partials._faq_slide')
-@include('partials._search_slide')
 
 @php
     use App\libraries\Slider;
@@ -27,5 +23,3 @@
         </div>
     </div>
 </section>
-
-@endsection

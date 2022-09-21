@@ -14,6 +14,7 @@
     @vite('resources/css/app.css')
     <script src="//unpkg.com/alpinejs" defer></script>
     <title>Alursers Universe</title>
+    @livewireStyles
 </head>
 <body class="overflow-hidden" x-data="{roadmap: false, collection: false, faq: false, search: false}">
   <nav class="relative container mx-auto bg-slate-900 
@@ -39,7 +40,7 @@
   <div class="h-screen z-10 absolute top-0 w-full" 
   x-on:click="roadmap = false, collection = false, faq = false, search = false"></div>
   <x-flash-found-message />
-  @yield('content')
+  @livewire('home-page')
   <footer>
     <section id="footer">
       <div class="absolute container left-1/2 text-center space-x-5 p-5 bottom-0
@@ -53,6 +54,7 @@
   <div class="h-screen z-0 absolute top-0 w-full">
     @include('partials._particles')
   </div>
+  @livewireScripts
   <script src="https://kit.fontawesome.com/dce035b76e.js" crossorigin="anonymous"></script>
   <script src="{{asset("js/bloobs_slider.js")}}"></script>
 </body>
