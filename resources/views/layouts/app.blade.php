@@ -16,7 +16,8 @@
     <title>Alursers Universe</title>
     @livewireStyles
 </head>
-<body class="overflow-hidden" x-data="{roadmap: false, collection: false, faq: false, search: false}">
+<body class="overflow-hidden" 
+x-data="{roadmap: false, collection: false, faq: false, search: false}">
   <nav class="relative container mx-auto bg-slate-900 
   px-10 py-1 items-center md:flex justify-between z-20">
     <div>

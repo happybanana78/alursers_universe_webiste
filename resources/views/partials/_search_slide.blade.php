@@ -1,4 +1,4 @@
-<div x-show="search" x-cloak 
+<div x-data="{rarity: false}" x-show="search" x-cloak 
 x-transition:enter="transition duration-1000"
 x-transition:enter-start="opacity-0 -translate-y-5"
 x-transition:enter-end="opacity-100 translate-y-0"
@@ -12,13 +12,19 @@ class="container h-screen bg-emerald-900 absolute top-30 left-1/2 z-30
         <form wire:submit.prevent="search" action="/" method="POST" class="flex justify-center">
             @csrf
             <input type="text" name="nftName" placeholder="Bloob #N" 
-            class="w-1/2 p-2 text-2xl" wire:model="nftName">
+            class="w-1/2 p-2 text-2xl" wire:model="nftName" autocomplete="off">
             <button class="text-4xl ml-3 bg-slate-900 text-white px-6 p-2
             hover:bg-slate-800" 
-            type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            type="submit" x-on:click="rarity = true"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
     </div>
-    <div class="container text-center mx-auto p-6">
-        <b class="text-3xl text-white">{{$nftData}}</b>
+    <div x-show="rarity" x-cloak class="container text-center mx-auto p-6">
+        @php
+            if ($nftData == 0) {
+                echo "<div class='lds-dual-ring'></div>";
+            } else {
+                echo "<b class='text-3xl text-white'>" . $nftData . "</b>";
+            }
+        @endphp
     </div>
 </div>

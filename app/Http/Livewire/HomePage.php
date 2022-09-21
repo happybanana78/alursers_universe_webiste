@@ -7,7 +7,7 @@ use Livewire\Component;
 class HomePage extends Component
 {
     public $nftName;
-    public $nftData;
+    public $nftData = 0;
 
     public function search() {
         $found = false;
