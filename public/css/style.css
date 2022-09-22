@@ -48,6 +48,50 @@ body {
   }
 }
 
+/* Mobile Menu */
+.menu {
+  cursor: pointer;
+  width: 45px;
+  height: 50px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.menu-top,
+.menu-middle,
+.menu-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+.menu-top {
+  transform: translateY(10px);
+}
+.menu-middle {
+  transform: translateY(25px);
+}
+.menu-bottom {
+  transform: translateY(40px);
+}
+.open {
+  transform: rotate(90deg);
+  transform: translateY(24px)
+}
+.open .menu-top {
+  transform: rotate(45deg);
+}
+.open .menu-middle {
+  display: none;
+}
+.open .menu-bottom {
+  transform: rotate(-45deg);
+}
+
 *,
 ::before,
 ::after {

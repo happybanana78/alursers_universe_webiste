@@ -29,11 +29,6 @@ class HomePage extends Component
                     if ($this->nftName == $json["name"]) {
                         $found = true;
                         $this->nftData = $json["attributes"][6]["value"];
-                        /*
-                        return view("main", [
-                            "data" => $json["attributes"][6]["value"]
-                        ]);
-                        */
                     }
                 }
             }

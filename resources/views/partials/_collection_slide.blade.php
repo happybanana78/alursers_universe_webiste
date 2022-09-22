@@ -7,6 +7,9 @@ x-transition:leave-start="opacity-100 translate-y-0"
 x-transition:leave-end="opacity-0 translate-y-full"
 class="container h-screen bg-emerald-900 absolute top-30 left-1/2 -translate-x-1/2
 z-30 overflow-y-auto">
+    <div class="absolute left-10 top-10 cursor-pointer" x-on:click="collection = false">
+        <img src="{{asset("images/close.png")}}" alt="" width="40px" height="40px">
+    </div>
     <div class="text-center my-4 text-3xl text-white"><b>Body</b></div>
         <div class="text-center">
             <div class="flex justify-center">

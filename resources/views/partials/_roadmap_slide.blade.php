@@ -16,4 +16,7 @@ class="container h-screen bg-emerald-900 absolute top-30 left-1/2 z-30
     <div class="w-3/4 lg:w-2/5 mb-20">
         <img class="max-w-full" src="{{asset("images/roadmap.png")}}" alt="">
     </div>
+    <div class="absolute left-0 top-10 cursor-pointer" x-on:click="roadmap = false">
+        <img src="{{asset("images/close.png")}}" alt="" width="40px" height="40px">
+    </div>
 </div>

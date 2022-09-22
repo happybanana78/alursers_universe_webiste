@@ -7,6 +7,9 @@ x-transition:leave-start="opacity-100 translate-y-0"
 x-transition:leave-end="opacity-0 translate-y-full"
 class="container h-screen bg-emerald-900 absolute top-30 left-1/2 -translate-x-1/2
 z-30 px-28 overflow-y-auto">
+    <div class="absolute left-10 top-10 cursor-pointer" x-on:click="faq = false">
+        <img src="{{asset("images/close.png")}}" alt="" width="40px" height="40px">
+    </div>
     <div class="text-center text-5xl text-white py-6"><b>FAQ</b></div>
     <div class="text-center mt-5 mb-28">
         <b class="text-3xl text-slate-900">WHAT IS AN NFT?</b>

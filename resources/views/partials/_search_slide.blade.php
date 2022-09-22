@@ -7,6 +7,9 @@ x-transition:leave-start="opacity-100 translate-y-0"
 x-transition:leave-end="opacity-0 translate-y-full"
 class="container h-screen bg-emerald-900 absolute top-30 left-1/2 z-30
 -translate-x-1/2 items-center px-6">
+    <div class="absolute left-10 top-10 cursor-pointer" x-on:click="search = false">
+        <img src="{{asset("images/close.png")}}" alt="" width="40px" height="40px">
+    </div>
     <div class="p-6 container mx-auto text-center space-y-20 mb-20 mt-40">
         <b class="text-light text-4xl">Wanna Know How Rare You NFT Is?</b>
         <form wire:submit.prevent="search" action="/" method="POST" class="flex justify-center">

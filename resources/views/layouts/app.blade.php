@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" href="{{asset("favicon.png")}}" type="image/x-icon">
     <link rel="stylesheet" href="{{asset("css/style.css")}}">
     <link rel="stylesheet" href="{{asset("css/particles.css")}}">
@@ -19,11 +18,11 @@
 <body class="overflow-hidden" 
 x-data="{roadmap: false, collection: false, faq: false, search: false}">
   <nav class="relative container mx-auto bg-slate-900 
-  px-10 py-1 items-center md:flex justify-between z-20">
+  px-10 py-1 items-center flex justify-between z-30">
     <div>
-      <a href="/"><img class="w-44" src="{{asset("images/logo.png")}}" alt=""></a>
+      <a href="/"><img class="w-44 z-30" src="{{asset("images/logo.png")}}" alt=""></a>
     </div>
-    <div class="text-white space-x-6 text-2xl hidden md:flex">
+    <div class="text-white space-x-6 text-2xl hidden md:flex z-30">
       <a x-on:click="roadmap = !roadmap, collection = false, faq = false, search = false" 
       class="hover:text-neutral-500 cursor-pointer">Roadmap</a>
       <a x-on:click="collection = !collection, roadmap = false, faq = false, search = false" 
@@ -33,9 +32,27 @@ x-data="{roadmap: false, collection: false, faq: false, search: false}">
       <a x-on:click="search = !search, roadmap = false, collection = false, faq = false" 
       class="hover:text-neutral-500 cursor-pointer"><i class="fa-solid fa-magnifying-glass"></i></a>
     </div>
-    <div>
+    <div class="z-30">
       <button class="p-3 px-5 bg-white text-slate-900 rounded-full hover:scale-125 ease-in duration-300
        text-xl hidden md:block">Join Now!</button>
+    </div>
+    <div id="menu_btn" class="md:hidden menu -mr-10 z-30">
+      <span class="menu-top"></span>
+      <span class="menu-middle"></span>
+      <span class="menu-bottom"></span>
+    </div>
+    <div class="md:hidden">
+      <div id="menu" class="absolute flex-col items-center mt-12 text-white space-y-4
+      text-2xl left-0 right-0 bg-slate-900 py-8 z-30 hidden">
+        <a x-on:click="roadmap = !roadmap, collection = false, faq = false, search = false" 
+        class="hover:text-neutral-500 cursor-pointer">Roadmap</a>
+        <a x-on:click="collection = !collection, roadmap = false, faq = false, search = false" 
+        class="hover:text-neutral-500 cursor-pointer">Collection</a>
+        <a x-on:click="faq = !faq, roadmap = false, collection = false, search = false" 
+        class="hover:text-neutral-500 cursor-pointer">FAQ</a>
+        <a x-on:click="search = !search, roadmap = false, collection = false, faq = false" 
+        class="hover:text-neutral-500 cursor-pointer"><i class="fa-solid fa-magnifying-glass"></i></a>
+      </div>
     </div>
   </nav>
   <div class="h-screen z-10 absolute top-0 w-full" 
@@ -58,5 +75,6 @@ x-data="{roadmap: false, collection: false, faq: false, search: false}">
   @livewireScripts
   <script src="https://kit.fontawesome.com/dce035b76e.js" crossorigin="anonymous"></script>
   <script src="{{asset("js/bloobs_slider.js")}}"></script>
+  <script src="{{asset("js/menu.js")}}"></script>
 </body>
 </html>
