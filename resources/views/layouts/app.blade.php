@@ -36,7 +36,8 @@ x-data="{roadmap: false, collection: false, faq: false, search: false}">
       <button class="p-3 px-5 bg-white text-slate-900 rounded-full hover:scale-125 ease-in duration-300
        text-xl hidden md:block">Join Now!</button>
     </div>
-    <div id="menu_btn" class="md:hidden menu -mr-10 z-30">
+    <div id="menu_btn" class="md:hidden menu -mr-10 z-30"
+    x-on:click="roadmap = false, collection = false, faq = false, search = false">
       <span class="menu-top"></span>
       <span class="menu-middle"></span>
       <span class="menu-bottom"></span>

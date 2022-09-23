@@ -5,5 +5,4 @@ menuBtn.addEventListener("click", function () {
     menuBtn.classList.toggle("open");
     mobileMenu.classList.toggle("flex");
     mobileMenu.classList.toggle("hidden");
-    mobileMenu.classList.toggle("test");
 });
