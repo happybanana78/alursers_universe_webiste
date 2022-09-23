@@ -38,6 +38,10 @@ class HomePage extends Component
         }
     }
 
+    public function resetSearch() {
+        $this->nftData = 0;
+    }
+
     public function render()
     {
         return view('livewire.home-page');

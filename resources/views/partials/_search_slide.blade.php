@@ -18,10 +18,14 @@ class="container h-screen bg-emerald-900 absolute top-30 left-1/2 z-30
             class="w-1/2 p-2 text-2xl" wire:model="nftName" autocomplete="off">
             <button class="text-4xl ml-3 bg-slate-900 text-white px-6 p-2
             hover:bg-slate-800" 
-            type="submit" x-on:click="rarity = true"><i class="fa-solid fa-magnifying-glass"></i></button>
+            type="submit" 
+            x-on:click="rarity = true, setTimeout(function(){ document.getElementById('resetBtn').click(); rarity = false }, 5000);">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
         </form>
+        <button class="hidden" id="resetBtn" wire:click="resetSearch"></button>
     </div>
-    <div x-show="rarity" x-cloak class="container text-center mx-auto p-6">
+    <div id="rar" x-show="rarity" x-cloak class="container text-center mx-auto p-6">
         @php
             if ($nftData == 0) {
                 echo "<div class='lds-dual-ring'></div>";
